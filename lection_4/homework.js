@@ -1,14 +1,24 @@
 // Домашнее задание(Порешать типовые задачи - написать порядок и вывод в консоли):
 // 1)
-// console.log('1');
+//console.log('1');
 // setTimeout(() => console.log('2'), 1);
 // let promiseNew = new Promise((resolve) => {
-//     console.log('3');
-//     resolve();
-// });
+//  console.log('3');
+// resolve();
+//  });
 // promiseNew.then(() => console.log('4'));
 // setTimeout(() => console.log('5'));
-// console.log('6');
+// console.log('6'); 
+//    1)1
+//    2)3
+//    3)6
+//    4)4
+//    5)2
+//    6)5
+   
+   
+   
+   
 //////////////////////////////
 // 2)
 // let promiseTree = new Promise((resolve, reject) => {
@@ -19,6 +29,9 @@
 //     }, 0);
 //     console.log("3");
 // });
+// 1)1
+// 2)3
+// 3)2
 /////////////////////////
 // 3)
 // let promiseTwo = new Promise((resolve, reject) => {
@@ -40,6 +53,7 @@
 //     .then((res) => {
 //         console.log(res);
 //     });
+//  console-"abc"
 /////////////////////////////
 // 4)
 // function doSmth() {
@@ -61,6 +75,11 @@
 //         console.log("4", c);
 //         return c;
 //     });
+    // 1,123
+    // 2,123
+    // 3,321
+    // 4,undefined
+
 ///////////////////////////
 // 5)
 // console.log("1");
@@ -69,6 +88,10 @@
 // }, 0);
 // Promise.resolve().then(() => console.log("3"));
 // console.log("4");
+// 1)1
+// 2)4
+// 3)3
+// 4)2
 ////////////////////////////
 //7)
 // async function a() {
@@ -83,6 +106,11 @@
 //   console.log("f2");
 // })();
 // console.log("2");
+// 1)1
+// 2)f1
+// 3)a
+// 4)2
+// 5)f2
 ////////////////////////////////
 //8)
 // console.log(1);
@@ -108,11 +136,22 @@
 // func();
 
 // console.log(10);
+// 1)1
+// 2)3
+// 3)4
+// 4)5
+// 5)10
+// 6)6
+// 7)7
+// 8)8
+// 9)2
+// 10)9
 ///////////////////////////////////
 // 9)*
 // function foo(callback) {
 //     setTimeout(() => {
 //         callback('A');
+        
 //     }, Math.random() * 100);
 // }
 // function bar(callback) {
@@ -125,11 +164,20 @@
 //         callback('C');
 //     }, Math.random() * 100);
 // }
-//
-// foo(console.log)
-// bar(console.log)
-// baz(console.log)
 
+// async function main() {
+//     await new Promise((resolve) => foo(resolve))
+//     .then(console.log)
+    
+//     await new Promise((resolve) => bar(resolve))
+//     .then(console.log)
+    
+//     await new Promise((resolve) => baz(resolve))
+//     .then(console.log)
+// }
+  
+//   main();
 // Написать функцию, чтобы починить последовательность выполнения A,B,C без использования колбэк хэлла
 // в функциях foo, bar,baz запрещено что-либо менять
 // подсказка: нужны промисы =))
+
