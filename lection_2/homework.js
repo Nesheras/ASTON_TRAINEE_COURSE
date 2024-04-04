@@ -66,7 +66,9 @@ function multiply(...args){
 //     Текст ошибки: "В getUniqArray был передан невалидный параметр. Аргумент arr
 // должен быть массивом чисел".
 function getUniqArray(arr){
-    let result = new Set();
+
+    const result = new Set();
+
     arr.forEach(element => {
         if(typeof(element)!= 'number'|| isNaN(element)){
             throw Error ("В getUniqArray был передан невалидный параметр. Аргумент arr должен быть массивом чисел")
@@ -74,7 +76,11 @@ function getUniqArray(arr){
         result.add(element);
         
     });
-    let uniqArr = Array.from(result);
+
+    const uniqArr = Array.from(result);
+
+   
+
     return uniqArr;
     
 }
