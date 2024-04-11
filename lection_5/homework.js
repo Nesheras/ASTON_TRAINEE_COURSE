@@ -70,20 +70,18 @@
 // const bird = new Bird("Воробей");
 //////////////////////////////////////////////////////////
 // function Animal(name){
-//    this.name=name;
-//    this.speak = function(){
-//     console.log(`${this.name}:` +"Some generic sound")
-//    }
-// }
-// function Bird(name){
-   
-//     this.__proto__=new Animal(name)
-//     this.fly = function(){
-//         console.log("Flying high!")
-//     }
- 
-    
-// }
+//     this.name=name;
+//  }
+//  Animal.prototype.speak =function (){
+//          console.log(`${this.name}:` +"Some generic sound")
+//  }
+//  function Bird(name){
+//   Animal.call(this,name)
+//  }
+//  Bird.prototype.fly = function(){
+//          console.log(`${this.name}:` +"Flying high!")
+//  }
+// Bird.prototype.__proto__=Animal.prototype;
 
 // const animal = new Animal("Дженни");
 // const bird = new Bird("Воробей");
