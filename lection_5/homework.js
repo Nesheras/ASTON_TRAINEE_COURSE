@@ -1,33 +1,33 @@
 //1.
-// const a = {b: 1},
-//     c = Object.create(a);
-//
-// console.log(c.b); // ?
+//  const a = {b: 1},
+//      c = Object.create(a);
+
+// console.log(c.b); //  1
 // delete c.b;
-// console.log(c.b); // ?
+// console.log(c.b); //  1
 // delete a.b;
-// console.log(c.b); // ?
+// console.log(c.b); //  undef
 // a.z = 2;
-// console.log(c.z); // ?
+// console.log(c.z); // 2
 // c.z = 3;
-// console.log(a.z); // ?
+// console.log(a.z); // 2
 
 // 2.
 
 // const promise = new Promise(() => {
 // })
-// promise.prototype === Promise.__proto__ // ?
-//
+// promise.prototype === Promise.__proto__ // false
+
 // const obj = {}
-// obj.__proto__ === Object.prototype // ?
-//
-// new Array([]).__proto__ === Array.prototype // ?
-//
+// obj.__proto__ === Object.prototype // true
+
+// new Array([]).__proto__ === Array.prototype // true
+
 // function Fn1 () {}
 // function Fn2 () {}
-// Fn1.constructor === Fn2.constructor // ?
-//
-// Fn1.prototype === Fn2.prototype // ?
+// Fn1.constructor === Fn2.constructor // true
+
+// Fn1.prototype === Fn2.prototype // false
 //3.
 
 // У вас есть два конструктора, Animal и Bird.
@@ -45,6 +45,47 @@
 // const animal = new Animal("Дженни");
 // const bird = new Bird("Воробей");
 //
+// animal.speak(); // "Some generic sound"
+// bird.speak();   // "Some generic sound"
+// bird.fly();     // "Flying high!"
+
+// class Animal{
+//     constructor(name){
+//         this.name=name
+//     }
+//     speak(){
+//         console.log("Some generic sound")
+//     }
+// }
+// class Bird extends Animal{
+//     constructor(name){
+//         super(name)
+
+//     }
+//     fly(){
+//         console.log("Flying high!")
+//     }
+// }
+// const animal = new Animal("Дженни");
+// const bird = new Bird("Воробей");
+//////////////////////////////////////////////////////////
+// function Animal(name){
+//     this.name=name;
+//  }
+//  Animal.prototype.speak =function (){
+//          console.log(`${this.name}:` +"Some generic sound")
+//  }
+//  function Bird(name){
+//   Animal.call(this,name)
+//  }
+//  Bird.prototype.fly = function(){
+//          console.log(`${this.name}:` +"Flying high!")
+//  }
+// Bird.prototype.__proto__=Animal.prototype;
+
+// const animal = new Animal("Дженни");
+// const bird = new Bird("Воробей");
+
 // animal.speak(); // "Some generic sound"
 // bird.speak();   // "Some generic sound"
 // bird.fly();     // "Flying high!"
